@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title> Contact</title>
+  <meta name="title" content="Vasu | Contact">
+  <meta name="description" content="This is a personal portfolio html template made by Webdoo.Org">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.png" type="image/png">
+
+
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/require.css">
+  <link rel="stylesheet" href="./assets/css/pages/contact.css">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="preloader-circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+        <a href="#" class="logo">
+            <span style="font-size: 24px; font-weight: bold; color: #333;">Webdoo.Org</span>
+          </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="label-lg navbar-link has-after">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./service.html" class="label-lg navbar-link has-after">Services</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./portfolio.html" class="label-lg navbar-link has-after">Portfolio</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="label-lg navbar-link has-after active">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <a href="./contact.html" class="btn btn-primary">Contact Now</a>
+
+      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="section contact has-bg-image" aria-labelledby="contact-label"
+        style="background-image: url('./assets/images/contact-bg.png')">
+        <div class="container">
+
+          <form action="" id="contact-form" class="contact-form">
+            <h2 class="headline-sm" id="contact-label">Get in touch</h2>
+          
+            <p class="contact-text body-md">
+              Our friendly team would love to hear from you.
+            </p>
+          
+            <div class="wrapper">
+              <div>
+                <label for="name" class="label">First name</label>
+                <input type="text" name="name" id="name" placeholder="Name *" required class="input-field">
+              </div>
+          
+              <div>
+                <label for="email" class="label">Your Email </label>
+                <input type="email" name="email" id="email" placeholder="Email *" required class="input-field">
+              </div>
+            </div>
+          
+            <label for="subject" class="label">Subject</label>
+            <input type="text" name="subject" id="subject" placeholder="Subject *" class="input-field">
+          
+            <label for="message" class="label">Your message </label>
+            <textarea name="message" id="message" placeholder="Your message *" required class="input-field"></textarea>
+          
+            <button type="submit" class="btn btn-tertiary">Send Message</button>
+          </form>
+          
+          <!-- Include EmailJS script -->
+          <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+          <script>
+            (function() {
+              emailjs.init("9_poCfE5s402wrXW8"); // Replace YOUR_USER_ID with your actual user ID from EmailJS
+            })();
+          
+            // Handling form submission
+            const form = document.getElementById("contact-form");
+            form.addEventListener("submit", function(event) {
+              event.preventDefault();
+          
+              // Send email using EmailJS
+              emailjs.sendForm("service_nbqky2i", "template_p9gmt6n", form)
+                .then(function(response) {
+                  alert("Message sent successfully!");
+                }, function(error) {
+                  alert("Failed to send message. Please try again.");
+                });
+            });
+          </script>
+          
+
+          <div class="contact-content">
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="item-icon" style="background-color: hsl(177, 39%, 72%)">
+                  <ion-icon name="call" aria-hidden="true"></ion-icon>
+                </div>
+                <div>
+                  <p class="label-lg">Phone</p>
+                  <a href="tel:+91 9591835617" class="body-lg">+91 9591835617</a>
+                </div>
+              </li>
+          
+              <li class="contact-item">
+                <div class="item-icon" style="background-color: hsl(41, 99%, 64%)">
+                  <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                </div>
+                <div>
+                  <p class="label-lg">Mail</p>
+                  <a href="mailto:suvassuva8@gmail.com" class="body-lg">suvassuva8@gmail.com</a>
+                </div>
+              </li>
+          
+              <li class="contact-item">
+                <div class="item-icon" style="background-color: hsl(19, 97%, 85%)">
+                  <ion-icon name="location" aria-hidden="true"></ion-icon>
+                </div>
+                <div>
+                  <p class="label-lg">Visit My Studio</p>
+                  <address class="body-lg">
+                    1, Bangalore City, India
+                  </address>
+                </div>
+              </li>
+          
+              <!-- New WhatsApp Contact Item -->
+              <li class="contact-item">
+                <div class="item-icon" style="background-color:  hsl(76, 39%, 72%)">
+                  <ion-icon name="logo-whatsapp" aria-hidden="true"></ion-icon>
+                </div>
+                <div>
+                  <p class="label-lg">WhatsApp</p>
+                  <a href="https://wa.me/919591835617" class="body-lg" target="_blank">
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+      <ul class="social-list">
+        <li>
+          <a href="https://www.facebook.com/your-profile" class="social-link" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/your-profile" class="social-link" target="_blank">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/your-profile" class="social-link" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/your-profile" class="social-link" target="_blank">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.pinterest.com/your-profile" class="social-link" target="_blank">
+            <ion-icon name="logo-pinterest"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/9591835617" class="social-link" target="_blank">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      <p class="text-center">&copy; 2025 copyright all rights reserved</p>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
